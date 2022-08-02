@@ -3,99 +3,99 @@
     "breads": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "type": "Italiano Branco"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "type": "3 Queijos"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "type": "Parmesão e Orégano"
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "type": "Integral"
       }
     ],
     "meets": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "type": "Maminha"
       },
       {
         "id": 2,
-        "tipo": "Alcatra"
+        "type": "Alcatra"
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "type": "Picanha"
       },
       {
         "id": 4,
-        "tipo": "Artesanal"
+        "type": "Artesanal"
       },
       {
         "id": 5,
-        "tipo": "Veggie burger"
+        "type": "Veggie burger"
       }
 
     ],
-    "opcicionals": [
+    "opcionals": [
       {
         "id": 1,
-        "tipo": "Bacon"
+        "type": "Bacon"
       },
       {
         "id": 2,
-        "tipo": "Cheddar"
+        "type": "Cheddar"
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "type": "Salame"
       },
       {
         "id": 4,
-        "tipo": "Tomate"
+        "type": "Tomate"
       },
       {
         "id": 5,
-        "tipo": "Cebola roxa"
+        "type": "Cebola roxa"
       },
       {
         "id": 6,
-        "tipo": "Pepino"
+        "type": "Pepino"
       },
       {
         "id": 7,
-        "tipo": "Queijo Cheddar"
+        "type": "Queijo Cheddar"
       },
       {
         "id": 8,
-        "tipo": "Queijo Parmesão"
+        "type": "Queijo Parmesão"
       },
       {
         "id": 9,
-        "tipo": "Presunto"
+        "type": "Presunto"
       },
       {
         "id": 10,
-        "tipo": "Batata"
+        "type": "Batata"
       }
     ]
   },
   "status": [
     {
       "id": 1,
-      "tipo": "Solicitado"
+      "type": "Solicitado"
     },
     {
       "id": 2,
-      "tipo": "Em produção"
+      "type": "Em produção"
     },
     {
       "id": 3,
-      "tipo": "Finalizado"
+      "type": "Finalizado"
     }
   ],
   "burgers": []

@@ -18,46 +18,40 @@
           <label for="bread">Select your bread</label>
           <select id="bread" name="bread" v-model="bread">
             <option value="">Select your bread</option>
-            <option value="integral">integeral</option>
+            <option
+              value="breads.type"
+              v-for="breads in bread"
+              :key="breads.id"
+            >
+              {{ breads.type }}
+            </option>
           </select>
         </div>
         <div class="input-container">
           <label for="beef">Select your type beef</label>
           <select id="beef" name="beef" v-model="beef">
             <option value="">Select your beef</option>
-            <option value="picanha">picanha</option>
+            <option value="meets.type" v-for="meets in meet" :key="meets.id">
+              {{ meets.type }}
+            </option>
           </select>
         </div>
         <div class="input-container" id="opcionais-container">
           <label for="opcionais" id="opcionais-title"
             >Select your addicionals</label
           >
-          <div class="checkbox-container">
+          <div
+            class="checkbox-container"
+            v-for="opcionals in opcional"
+            :key="opcionals.id"
+          >
             <input
               type="checkbox"
               name="opicionais"
               v-model="opicionais"
-              value="salame"
+              value="opcionals.type"
             />
-            <span>salame</span>
-          </div>
-          <div class="checkbox-container">
-            <input
-              type="checkbox"
-              name="opicionais"
-              v-model="opicionais"
-              value="salame"
-            />
-            <span>salame</span>
-          </div>
-          <div class="checkbox-container">
-            <input
-              type="checkbox"
-              name="opicionais"
-              v-model="opicionais"
-              value="salame"
-            />
-            <span>salame</span>
+            <span>{{ opcionals.type }}</span>
           </div>
         </div>
         <div class="input-container">
@@ -76,28 +70,30 @@ export default {
     return {
       breads: null,
       meets: null,
-      opcicionals: null,
+      opcionals: null,
       name: null,
-      bread:null,
+      bread: null,
       meet: null,
       opcional: [],
       status: "solicited",
-      msg: null
+      msg: null,
     };
   },
 
   methods: {
-    async getIngredients (){
-        const req = await fetch("http://localhost:3000");
-        const data = await req.json();
+    async getIngredients() {
+      const req = await fetch("http://localhost:3000/ingredients");
+      const data = await req.json();
 
-        console.log(data);
-    }
+      this.bread = data.breads;
+      this.meet = data.meets;
+      this.opcional = data.opcionals;
+    },
   },
 
   mounted() {
-    this.getIngredients()
-  }
+    this.getIngredients();
+  },
 };
 </script>
 
