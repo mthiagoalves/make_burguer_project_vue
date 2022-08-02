@@ -1,7 +1,7 @@
 <template>
   <Banner />
   <div class="main-container">
-    <h1>Monte seu burguer:</h1>
+    <h1>Make your Burguer:</h1>
     <BurguerForm />
   </div>
 </template>

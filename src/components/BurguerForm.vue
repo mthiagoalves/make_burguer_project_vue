@@ -17,22 +17,20 @@
         <div class="input-container">
           <label for="bread">Select your bread</label>
           <select id="bread" name="bread" v-model="breads">
-            <option value="">Select your bread</option>
             <option
               :value="breads.type"
               v-for="breads in bread"
               :key="breads.id"
             >
-              {{ breads.type }}
+              - {{ breads.type }}
             </option>
           </select>
         </div>
         <div class="input-container">
           <label for="beef">Select your type beef</label>
           <select id="beef" name="beef" v-model="beefs">
-            <option value="">Select your beef</option>
             <option :value="beefs.type" v-for="beefs in beef" :key="beefs.id">
-              {{ beefs.type }}
+              - {{ beefs.type }}
             </option>
           </select>
         </div>
