@@ -3,11 +3,11 @@
     "breads": [
       {
         "id": 1,
-        "type": "Italiano Branco"
+        "type": "Italian"
       },
       {
         "id": 2,
-        "type": "3 Queijos"
+        "type": "3 Chesses"
       },
       {
         "id": 3,
@@ -18,18 +18,18 @@
         "type": "Integral"
       }
     ],
-    "meets": [
+    "beefs": [
       {
         "id": 1,
-        "type": "Maminha"
+        "type": "Steak Titty"
       },
       {
         "id": 2,
-        "type": "Alcatra"
+        "type": "Rump"
       },
       {
         "id": 3,
-        "type": "Picanha"
+        "type": "Rump steak"
       },
       {
         "id": 4,
@@ -48,39 +48,39 @@
       },
       {
         "id": 2,
-        "type": "Cheddar"
+        "type": "Sauces"
       },
       {
         "id": 3,
-        "type": "Salame"
+        "type": "Salami"
       },
       {
         "id": 4,
-        "type": "Tomate"
+        "type": "Tomato"
       },
       {
         "id": 5,
-        "type": "Cebola roxa"
+        "type": "Purple Onion"
       },
       {
         "id": 6,
-        "type": "Pepino"
+        "type": "Cucumber"
       },
       {
         "id": 7,
-        "type": "Queijo Cheddar"
+        "type": "Cheese Cheddar"
       },
       {
         "id": 8,
-        "type": "Queijo Parmesão"
+        "type": "Cheese Parmesão"
       },
       {
         "id": 9,
-        "type": "Presunto"
+        "type": "Ham"
       },
       {
         "id": 10,
-        "type": "Batata"
+        "type": "Chips"
       }
     ]
   },
@@ -91,11 +91,11 @@
     },
     {
       "id": 2,
-      "type": "Em produção"
+      "type": "In production"
     },
     {
       "id": 3,
-      "type": "Finalizado"
+      "type": "Finish"
     }
   ],
   "burgers": []

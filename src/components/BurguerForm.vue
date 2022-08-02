@@ -3,7 +3,7 @@
     <p>componente de mensagem</p>
 
     <div>
-      <form id="burguer-form">
+      <form id="burguer-form" @submit.prevent="createBurguer($event)">
         <div class="input-container">
           <label for="name">Name client</label>
           <input
@@ -16,10 +16,10 @@
         </div>
         <div class="input-container">
           <label for="bread">Select your bread</label>
-          <select id="bread" name="bread" v-model="bread">
+          <select id="bread" name="bread" v-model="breads">
             <option value="">Select your bread</option>
             <option
-              value="breads.type"
+              :value="breads.type"
               v-for="breads in bread"
               :key="breads.id"
             >
@@ -29,10 +29,10 @@
         </div>
         <div class="input-container">
           <label for="beef">Select your type beef</label>
-          <select id="beef" name="beef" v-model="beef">
+          <select id="beef" name="beef" v-model="beefs">
             <option value="">Select your beef</option>
-            <option value="meets.type" v-for="meets in meet" :key="meets.id">
-              {{ meets.type }}
+            <option :value="beefs.type" v-for="beefs in beef" :key="beefs.id">
+              {{ beefs.type }}
             </option>
           </select>
         </div>
@@ -42,16 +42,16 @@
           >
           <div
             class="checkbox-container"
-            v-for="opcionals in opcional"
-            :key="opcionals.id"
+            v-for="optional in opcionalsdata"
+            :key="optional.id"
           >
             <input
               type="checkbox"
-              name="opicionais"
-              v-model="opicionais"
-              value="opcionals.type"
+              name="opcionais"
+              v-model="opcionais"
+              :value="optional.type"
             />
-            <span>{{ opcionals.type }}</span>
+            <span>{{ optional.type }}</span>
           </div>
         </div>
         <div class="input-container">
@@ -69,13 +69,12 @@ export default {
   data() {
     return {
       breads: null,
-      meets: null,
-      opcionals: null,
+      beefs: null,
+      opcionalsdata: null,
       name: null,
       bread: null,
-      meet: null,
-      opcional: [],
-      status: "solicited",
+      beef: null,
+      opcionais: [],
       msg: null,
     };
   },
@@ -86,8 +85,20 @@ export default {
       const data = await req.json();
 
       this.bread = data.breads;
-      this.meet = data.meets;
-      this.opcional = data.opcionals;
+      this.beef = data.beefs;
+      this.opcionalsdata = data.opcionals;
+    },
+
+    async createBurguer() {
+      const data = {
+        nome: this.name,
+        beef: this.beefs,
+        bread: this.breads,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicited",
+      };
+
+      console.log(data);
     },
   },
 
