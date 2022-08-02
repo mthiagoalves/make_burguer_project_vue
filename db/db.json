@@ -1,6 +1,6 @@
 {
-  "ingredientes": {
-    "paes": [
+  "ingredients": {
+    "breads": [
       {
         "id": 1,
         "tipo": "Italiano Branco"
@@ -18,7 +18,7 @@
         "tipo": "Integral"
       }
     ],
-    "carnes": [
+    "meets": [
       {
         "id": 1,
         "tipo": "Maminha"
@@ -41,7 +41,7 @@
       }
 
     ],
-    "opcionais": [
+    "opcicionals": [
       {
         "id": 1,
         "tipo": "Bacon"

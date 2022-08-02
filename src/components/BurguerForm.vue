@@ -71,6 +71,33 @@
 <script>
 export default {
   name: "BurguerForm",
+
+  data() {
+    return {
+      breads: null,
+      meets: null,
+      opcicionals: null,
+      name: null,
+      bread:null,
+      meet: null,
+      opcional: [],
+      status: "solicited",
+      msg: null
+    };
+  },
+
+  methods: {
+    async getIngredients (){
+        const req = await fetch("http://localhost:3000");
+        const data = await req.json();
+
+        console.log(data);
+    }
+  },
+
+  mounted() {
+    this.getIngredients()
+  }
 };
 </script>
 
