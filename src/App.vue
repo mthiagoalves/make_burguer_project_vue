@@ -29,11 +29,12 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   .main-container{
     margin: 50px;
-    min-height: 410px;
+    min-height: 100vh;
   }
   
   h1{
