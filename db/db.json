@@ -39,7 +39,6 @@
         "id": 5,
         "type": "Veggie burger"
       }
-
     ],
     "opcionals": [
       {
@@ -68,11 +67,11 @@
       },
       {
         "id": 7,
-        "type": "Cheese Cheddar"
+        "type": "Cheddar"
       },
       {
         "id": 8,
-        "type": "Cheese Parmesão"
+        "type": "Parmesan"
       },
       {
         "id": 9,

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>componente de mensagem</p>
+    <Message :msg="msg" v-show="msg" /> <br /><br />
 
     <div>
       <form id="burguer-form" @submit.prevent="createBurguer($event)">
@@ -27,7 +27,7 @@
           </select>
         </div>
         <div class="input-container">
-          <label for="beef">Select your type beef</label>
+          <label for="beef">Select your steak type</label>
           <select id="beef" name="beef" v-model="beefs">
             <option :value="beefs.type" v-for="beefs in beef" :key="beefs.id">
               - {{ beefs.type }}
@@ -61,6 +61,8 @@
 </template>
 
 <script>
+import Message from "./Message.vue";
+
 export default {
   name: "BurguerForm",
 
@@ -89,19 +91,40 @@ export default {
 
     async createBurguer() {
       const data = {
-        nome: this.name,
+        name: this.name,
         beef: this.beefs,
         bread: this.breads,
         opcionais: Array.from(this.opcionais),
         status: "Solicited",
       };
 
-      console.log(data);
+      const dataJson = JSON.stringify(data);
+
+      const req = await fetch("http://localhost:3000/burgers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: dataJson,
+      });
+
+      const res = await req.json();
+
+      this.msg = `${data.name}, your request Nº ${res.id} created sucess! Please, just moment.`;
+
+      setTimeout(() => this.msg = "", 3000);
+
+      this.name = "";
+      this.bread = "";
+      this.beef = "";
+      this.opcionais = "";
     },
   },
 
   mounted() {
     this.getIngredients();
+  },
+
+  components: {
+    Message,
   },
 };
 </script>
