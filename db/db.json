@@ -97,5 +97,19 @@
       "type": "Finish"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "id": 1,
+      "name": "Thiago",
+      "beef": "Rump",
+      "bread": "3 Chesses",
+      "opcionais": [
+        "Bacon",
+        "Tomato",
+        "Sauces"
+      ],
+      "status": "In production",
+      "data": 1
+    }
+  ]
 }

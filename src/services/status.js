@@ -6,10 +6,8 @@ export default {
   },
 
   update: (id) => {
-    return http.patch(`burgers/${id}`, id);
+    return http.patch(`burgers/${id}`, { data: id });
   },
 
-  delete: (id) => {
-    return http.delete(`burgers/${id}`, {data: id});
-  },
+  
 };
