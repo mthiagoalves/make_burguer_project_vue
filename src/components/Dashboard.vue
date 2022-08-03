@@ -51,7 +51,8 @@
 
 <script>
 import Message from "./Message.vue";
-
+import Status from "../services/status";
+import Requests from "../services/requests";
 
 export default {
   name: "Dashboard",
@@ -71,33 +72,25 @@ export default {
 
   methods: {
     async getRequests() {
-      const req = await fetch("http://localhost:3000/burgers");
-
-      const data = await req.json();
-
-      this.burgers = data;
+      Requests.list().then((res) => {
+        this.burgers = res.data;
+      });
 
       this.getStatus();
     },
 
     async getStatus() {
-      const req = await fetch("http://localhost:3000/status");
-
-      const data = await req.json();
-
-      this.status = data;
+      Status.list().then((res) => {
+        this.status = res.data;
+      });
     },
 
     async deleteBurger(id) {
-      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
-        method: "DELETE",
+      Status.delete(id).then((res) => {
+        this.msg = `Request Nº: ${id} has ben DELETED!`;
+
+        setTimeout(() => (this.msg = ""), 5000);
       });
-
-      const res = await req.json();
-
-      this.msg = `Request Nº ${res.id} DELETED!`;
-
-      setTimeout(() => (this.msg = ""), 5000);
 
       this.getRequests();
     },
@@ -115,18 +108,14 @@ export default {
 
       const res = await req.json();
 
-      console.log(res);
-
-      this.msg = `Request Nº ${res.id} updated to "${res.status}"`;
+      this.msg = `Request Nº: ${res.id} updated to "${res.status}"`;
 
       setTimeout(() => (this.msg = ""), 5000);
     },
   },
 
   mounted() {
-    this.getRequests()
-
-   
+    this.getRequests();
   },
 };
 </script>

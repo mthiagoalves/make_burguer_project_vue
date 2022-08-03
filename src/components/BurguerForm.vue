@@ -83,7 +83,7 @@ export default {
 
   methods: {
     async getIngredients() {
-      Ingredients.list().then((res) => {
+      Ingredients.list().then(res => {
         this.bread = res.data.breads;
         this.beef = res.data.beefs;
         this.opcionalsdata = res.data.opcionals;
