@@ -51,6 +51,8 @@
 
 <script>
 import Message from "./Message.vue";
+
+
 export default {
   name: "Dashboard",
 
@@ -122,7 +124,9 @@ export default {
   },
 
   mounted() {
-    this.getRequests();
+    this.getRequests()
+
+   
   },
 };
 </script>

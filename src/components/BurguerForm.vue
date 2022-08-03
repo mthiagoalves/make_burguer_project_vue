@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Message :msg="msg" v-show="msg" /> 
+    <Message :msg="msg" v-show="msg" />
 
     <div>
       <form id="burguer-form" @submit.prevent="createBurguer($event)">
@@ -62,6 +62,7 @@
 
 <script>
 import Message from "./Message.vue";
+import Ingredients from "../services/ingredients";
 
 export default {
   name: "BurguerForm",
@@ -81,12 +82,11 @@ export default {
 
   methods: {
     async getIngredients() {
-      const req = await fetch("http://localhost:3000/ingredients");
-      const data = await req.json();
-
-      this.bread = data.breads;
-      this.beef = data.beefs;
-      this.opcionalsdata = data.opcionals;
+      Ingredients.list().then((res) => {
+        this.bread = res.data.breads;
+        this.beef = res.data.beefs;
+        this.opcionalsdata = res.data.opcionals;
+      });
     },
 
     async createBurguer() {
@@ -110,7 +110,7 @@ export default {
 
       this.msg = `${data.name}, your request Nº ${res.id} created sucess! Please, just moment.`;
 
-      setTimeout(() => this.msg = "", 3000);
+      setTimeout(() => (this.msg = ""), 3000);
 
       this.name = "";
       this.bread = "";
