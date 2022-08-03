@@ -99,48 +99,20 @@
   ],
   "burgers": [
     {
-      "name": "Bruno",
+      "name": "Thiago",
       "beef": "Steak Titty",
-      "bread": "Italian",
+      "bread": "3 Chesses",
       "opcionais": [
-        "Salami",
-        "Cheddar",
-        "Cucumber",
-        "Parmesan",
-        "Ham",
-        "Chips"
-      ],
-      "status": "Finish",
-      "id": 3
-    },
-    {
-      "name": "José ",
-      "beef": "Veggie burger",
-      "bread": "Parmesan and Oregan",
-      "opcionais": [
+        "Bacon",
         "Sauces",
-        "Salami",
-        "Tomato",
-        "Purple Onion"
+        "Purple Onion",
+        "Cheddar",
+        "Ham",
+        "Parmesan",
+        "Tomato"
       ],
       "status": "Solicited",
-      "id": 4
-    },
-    {
-      "name": "Joao Burno ",
-      "beef": "Rump steak",
-      "bread": "Parmesan and Oregan",
-      "opcionais": [
-        "Sauces",
-        "Salami",
-        "Tomato",
-        "Cucumber",
-        "Cheddar",
-        "Parmesan",
-        "Ham"
-      ],
-      "status": "In production",
-      "id": 5
+      "id": 1
     }
   ]
 }
