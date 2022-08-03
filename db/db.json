@@ -109,7 +109,10 @@
         "Sauces"
       ],
       "status": "In production",
-      "data": 1
+      "data": 1,
+      "{\"status\":\"Finish\"}": "",
+      "Finish": "",
+      "Solicited": ""
     }
   ]
 }

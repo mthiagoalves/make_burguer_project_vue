@@ -85,6 +85,16 @@ export default {
       });
     },
 
+    async deleteBurger(id) {
+      Status.delete(id).then((res) => {
+        this.msg = `Request Nº: ${id} has ben DELETED!`;
+
+        setTimeout(() => (this.msg = ""), 5000);
+      });
+
+      this.getRequests();
+    },
+
     async updateStatus(event, id) {
       const option = event.target.value;
 
@@ -98,18 +108,11 @@ export default {
 
       const res = await req.json();
 
+      console.log(res)
+
       this.msg = `Request Nº: ${res.id} updated to "${res.status}"`;
 
       setTimeout(() => (this.msg = ""), 5000);
-    },
-    async deleteBurger(id) {
-      Requests.delete(id).then((res) => {
-        this.msg = `Request Nº: ${id} has ben DELETED!`;
-
-        setTimeout(() => (this.msg = ""), 5000);
-      });
-
-      this.getRequests();
     },
   },
 
