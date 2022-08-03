@@ -76,6 +76,7 @@ export default {
       bread: null,
       beef: null,
       opcionais: [],
+      id: null,
       msg: null,
     };
   },
@@ -91,6 +92,7 @@ export default {
 
     async createBurguer() {
       const data = {
+        id: "",
         name: this.name,
         beef: this.beefs,
         bread: this.breads,
@@ -98,19 +100,11 @@ export default {
         status: "Solicited",
       };
 
-      const dataJson = JSON.stringify(data);
+      Ingredients.create(data).then((res) => {
+        this.msg = `${data.name}, your request Nº ${res.data.id} created sucess! Please, just moment.`;
 
-      const req = await fetch("http://localhost:3000/burgers", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: dataJson,
+        setTimeout(() => (this.msg = ""), 3000);
       });
-
-      const res = await req.json();
-
-      this.msg = `${data.name}, your request Nº ${res.id} created sucess! Please, just moment.`;
-
-      setTimeout(() => (this.msg = ""), 3000);
 
       this.name = "";
       this.bread = "";

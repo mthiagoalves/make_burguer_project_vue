@@ -99,20 +99,65 @@
   ],
   "burgers": [
     {
-      "name": "Thiago",
-      "beef": "Steak Titty",
-      "bread": "3 Chesses",
+      "name": "Thiago Alves",
+      "beef": "Rump",
+      "bread": "Parmesan and Oregan",
       "opcionais": [
-        "Bacon",
-        "Sauces",
-        "Purple Onion",
-        "Cheddar",
-        "Ham",
-        "Parmesan",
-        "Tomato"
+        "Bacon"
       ],
       "status": "Solicited",
       "id": 1
+    },
+    {
+      "name": "Thiago",
+      "beef": "Artesanal",
+      "bread": "Parmesan and Oregan",
+      "id": 2,
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicited"
+    },
+    {
+      "name": "Thiago Alves da Silva",
+      "beef": "Rump steak",
+      "bread": "Parmesan and Oregan",
+      "id": 3,
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicited"
+    },
+    {
+      "name": "Thiago",
+      "beef": "Rump",
+      "bread": "3 Chesses",
+      "id": 4,
+      "opcionais": [
+        "Bacon",
+        "Chips"
+      ],
+      "status": "Solicited"
+    },
+    {
+      "name": "Thiago Alves da Silva",
+      "beef": "Rump steak",
+      "bread": "Integral",
+      "id": 5,
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicited"
+    },
+    {
+      "name": "Thiago",
+      "beef": "Rump steak",
+      "bread": "Parmesan and Oregan",
+      "id": 6,
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicited"
     }
   ]
 }
