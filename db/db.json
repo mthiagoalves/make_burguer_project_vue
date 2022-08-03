@@ -86,7 +86,7 @@
   "status": [
     {
       "id": 1,
-      "type": "Solicitado"
+      "type": "Solicited"
     },
     {
       "id": 2,
@@ -97,5 +97,50 @@
       "type": "Finish"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "name": "Bruno",
+      "beef": "Steak Titty",
+      "bread": "Italian",
+      "opcionais": [
+        "Salami",
+        "Cheddar",
+        "Cucumber",
+        "Parmesan",
+        "Ham",
+        "Chips"
+      ],
+      "status": "Finish",
+      "id": 3
+    },
+    {
+      "name": "José ",
+      "beef": "Veggie burger",
+      "bread": "Parmesan and Oregan",
+      "opcionais": [
+        "Sauces",
+        "Salami",
+        "Tomato",
+        "Purple Onion"
+      ],
+      "status": "Solicited",
+      "id": 4
+    },
+    {
+      "name": "Joao Burno ",
+      "beef": "Rump steak",
+      "bread": "Parmesan and Oregan",
+      "opcionais": [
+        "Sauces",
+        "Salami",
+        "Tomato",
+        "Cucumber",
+        "Cheddar",
+        "Parmesan",
+        "Ham"
+      ],
+      "status": "In production",
+      "id": 5
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Message :msg="msg" v-show="msg" /> <br /><br />
+    <Message :msg="msg" v-show="msg" /> 
 
     <div>
       <form id="burguer-form" @submit.prevent="createBurguer($event)">
