@@ -100,19 +100,14 @@
   "burgers": [
     {
       "id": 1,
-      "name": "Thiago",
-      "beef": "Rump",
-      "bread": "3 Chesses",
+      "name": "Bruno",
+      "beef": "Veggie burger",
+      "bread": "Parmesan and Oregan",
       "opcionais": [
         "Bacon",
-        "Tomato",
-        "Sauces"
+        "Chips"
       ],
-      "status": "In production",
-      "data": 1,
-      "{\"status\":\"Finish\"}": "",
-      "Finish": "",
-      "Solicited": ""
+      "status": "Finish"
     }
   ]
 }

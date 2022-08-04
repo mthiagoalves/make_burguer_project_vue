@@ -53,6 +53,7 @@
 import Message from "./Message.vue";
 import Status from "../services/status";
 import Requests from "../services/requests";
+import axios from "axios";
 
 export default {
   name: "Dashboard",
@@ -86,7 +87,7 @@ export default {
     },
 
     async deleteBurger(id) {
-      Status.delete(id).then((res) => {
+      Requests.delete(id).then((res) => {
         this.msg = `Request Nº: ${id} has ben DELETED!`;
 
         setTimeout(() => (this.msg = ""), 5000);
@@ -100,19 +101,19 @@ export default {
 
       const dataJson = JSON.stringify({ status: option });
 
-      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: dataJson,
-      });
+      const headers = {
+        Autorization: "Barrer my-token",
+        "Content-Type": "application/json",
+      };
 
-      const res = await req.json();
+      axios
+        .patch(`http://localhost:3000/burgers/${id}`, dataJson, { headers })
+        .then((res) => {
 
-      console.log(res)
+          this.msg = `Request Nº: ${res.data.id} updated to "${res.data.status}"`;
 
-      this.msg = `Request Nº: ${res.id} updated to "${res.status}"`;
-
-      setTimeout(() => (this.msg = ""), 5000);
+          setTimeout(() => (this.msg = ""), 5000);
+        });
     },
   },
 
